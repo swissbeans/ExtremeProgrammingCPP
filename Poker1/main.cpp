@@ -1,6 +1,6 @@
 /* 
  * File:   main.cpp
- * Author: Matt Matney
+ * Author: Matt Matney and Carole Schroeder
  *
  * Created on February 10, 2015, 3:14 PM
  */
@@ -74,7 +74,7 @@ bool contains(string one, char a) {
     for (int i = 0; i < 6; i++) {
         //cout << one.at(i) << endl;
         if (one.at(i) == a) {
-            
+
             return true;
         }
     }
@@ -90,7 +90,7 @@ int checkPermutations(string array[]) {
     for (int i = 0; i < MAX; i++) {
         //cout << i << ": " << permutations[i] << endl;
         //cout << "The current count is: " << count << endl;
-        for (int j = i+1; j < MAX; j++) {
+        for (int j = i + 1; j < MAX; j++) {
             if ((validSquare(permutations[i], permutations[j], '0', '1'))
                     && (validSquare(permutations[i], permutations[j], '0', '4'))
                     && (validSquare(permutations[i], permutations[j], '0', '9'))
@@ -118,8 +118,8 @@ int main(int argc, char** argv) {
     generateCombinations();
     cout << checkPermutations(permutations);
     //printArray(permutations, MAX);
-//    cout << validSquare(permutations[0], permutations[1], '2', '5') << endl;
-//    cout << permutations[0]<< endl;
-//    cout << permutations[1];
+    //    cout << validSquare(permutations[0], permutations[1], '2', '5') << endl;
+    //    cout << permutations[0]<< endl;
+    //    cout << permutations[1];
     return 0;
 }
