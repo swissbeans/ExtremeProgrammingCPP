@@ -39,6 +39,7 @@ int main(int argc, char** argv) {
     //before 3, and if digit 2 comes before 3.  
     if (keylog.is_open()) {
         while (getline(keylog, line)) {
+            //Matt helped with the syntax of digit line: (atoi(line.substr(0, 1).c_str());)
             int digit1 = atoi(line.substr(0, 1).c_str());
             int digit2 = atoi(line.substr(1, 1).c_str());
             int digit3 = atoi(line.substr(2, 1).c_str());
